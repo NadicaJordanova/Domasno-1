@@ -11,27 +11,22 @@ const studenti = [
   { ime: "Mara", prosek: 5.6, grad: "Bitola" },
   { ime: "Ivo", prosek: 2.7, grad: "Strumica" },
 ];
-// Da se presmeta vkupniot prosek na site studenti
-const proseciString = [];
-studenti.forEach((student) => {
-  proseciString.push(`${student.prosek}`);
-  return proseciString;
-});
-console.log(proseciString);
 
-const proseciBroj = [];
-proseciString.forEach((prosek) => {
-  const brojProsek = Number(prosek);
-  proseciBroj.push(brojProsek);
-  return proseciBroj;
+// Da se presmeta vkupniot prosek na site studenti
+const proseci = [];
+studenti.forEach((student) => {
+  proseci.push(student.prosek);
+  return proseci;
 });
-console.log(proseciBroj);
+console.log(proseci);
+
+
 
 var vkupenProsek = 0;
 var suma = 0;
-for (let i = 0; i < proseciBroj.length; i++) {
-  suma += proseciBroj[i];
-  vkupenProsek = suma / proseciBroj.length;
+for (let i = 0; i < proseci.length; i++) {
+  suma += proseci[i];
+  vkupenProsek = suma / proseci.length;
 }
 
 console.log(vkupenProsek);
@@ -188,6 +183,7 @@ function trijagolnik(operacija){
 
 const plostina = trijagolnik('plostina')
 console.log(plostina(2, 3, 4, 20))
+
 
 
 
