@@ -158,6 +158,11 @@ else if(monthInput.value === "december"){
 }
 }
 
+const znak = calculateSign(monthInput.value, dayInput.value)
+console.log(znak)
+
+
+
 const getBtn = document.getElementById("btn")
 
 
@@ -166,6 +171,7 @@ getBtn.addEventListener("click", () => {
     document.getElementById("sign").innerText = `
     Your sign is ${sign}
     `
+    console.log(sign)
 })
 
 // da kreirame funkcija sto presmetuva perimetar i plostina na pravoagolnik
